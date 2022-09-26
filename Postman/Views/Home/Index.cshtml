@@ -1,0 +1,29 @@
+﻿@model WeatherForecast.Root
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<p>   
+    @{
+        int i = 0;
+    }
+    @foreach (var item in Model.list)
+    {
+        <p>
+        Date @item.dt_txt
+        <br />
+        Max temp in celcius: @item.main.Temp_min.ToString("0.00")
+        <br />
+        Min temp in celcius: @item.main.Temp_max.ToString("0.00") 
+        <br />
+        <img src="http://openweathermap.org/img/wn/@item.weather[i].icon@@2x.png"/>
+        
+        </p>
+    
+    }
+    
+
+        
+    
+</p>
